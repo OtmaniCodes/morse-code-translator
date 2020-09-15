@@ -1,0 +1,1 @@
+"# morse-code-translator"  git init git add README.md git commit -m "first commit" git branch -M master git remote add origin https://github.com/Ahmed-otmani/morse-code-translator.git git push -u origin mast

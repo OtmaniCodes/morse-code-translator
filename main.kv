@@ -1,0 +1,79 @@
+FloatLayout:
+    normal_txt: normal_txt
+    morse_txt: morse_txt
+    canvas.before:
+        Color:
+            rgba: [1,.4, 0, 1]
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    Label:
+        text: 'morse code'.title()
+        bold: True
+        color: [1,1,1,1]
+        size_hint: None, None
+        size: self.texture_size
+        font_size: 50
+        pos_hint: {'top':.98, 'center_x':.5}
+        underline: True
+
+    Label:
+        text: 'translator'.upper()
+        bold: True
+        color: [0,1,0,1]
+        size_hint: None, None
+        size: self.texture_size
+        font_size: 40
+        pos_hint: {'top':.90, 'center_x':.5}
+    TextInput:
+        id: normal_txt
+        size_hint: .9, .07
+        pos_hint: {'top': .7, 'x':.05}
+        font_size: 20
+        on_text:
+            app.change(normal_txt.text)
+        
+    Label:
+        pos_hint: {'top':.75, 'x':.05}
+        size_hint: None, None
+        size: self.texture_size
+        font_size: 20
+        bold: True
+        color: [0,0,0,1]
+        text: "enter your text here:".title()
+
+    TextInput:
+        id: morse_txt
+        bold: True
+        size_hint: .9, .07
+        pos_hint: {'top': .3, 'x':.05}
+        font_size: 20
+        readonly: True
+    Label:
+        pos_hint: {'top':.35, 'x':.05}
+        size_hint: None, None
+        size: self.texture_size
+        font_size: 20
+        bold: True
+        color: [0,0,0,1]
+        text: "morse code:".title()
+
+    Button:
+        pos_hint: {'top': .23, 'x': .005}
+        size_hint: .3, .04
+        text: 'Reset'
+        background_normal: ''
+        background_down: ''
+        background_color: [1,.4, 0, 1]
+        font_size: 20
+        underline: True
+        bold: True
+        color:[1,1,1, .8]
+        on_release:
+            morse_txt.text= ''
+            normal_txt.text= ''
+            self.color= [1,1,1,.8]
+        on_press:
+            self.color= [0,0,0, 1]
+            self.background_color= [1,.4, 0, 1]
