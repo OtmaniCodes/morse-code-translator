@@ -1,1 +1,8 @@
-"# morse-code-translator"  git init git add README.md git commit -m "first commit" git branch -M master git remote add origin https://github.com/Ahmed-otmani/morse-code-translator.git git push -u origin mast
+# morse-code-translator
+_________________________________________________
+this is an app made by python and kivy.
+it translates string textes to morse
+code.
+__________________________________________________
+
+Created by Ahmed El Otmani, all rights reserved.
